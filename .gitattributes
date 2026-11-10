@@ -1,0 +1,7 @@
+*.png binary
+*.pdf binary
+*.asc text eol=crlf
+*.asy text eol=crlf
+*.cir text eol=crlf
+*.svg text
+*.csv text

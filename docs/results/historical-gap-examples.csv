@@ -1,0 +1,5 @@
+top_gap_cm,bottom_gap_cm,object_crossings,both_scintillator_deposits,electronics_coincidences,coincidence_per_crossing_pct,evidence_status
+1,1,126,40,24,19.0,historically_reported_not_independently_reproduced
+3,1,115,32,13,11.3,historically_reported_not_independently_reproduced
+5,5,117,23,12,10.3,historically_reported_not_independently_reproduced
+1,10,127,17,7,5.5,historically_reported_not_independently_reproduced

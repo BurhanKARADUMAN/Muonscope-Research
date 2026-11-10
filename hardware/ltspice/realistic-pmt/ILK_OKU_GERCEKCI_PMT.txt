@@ -1,0 +1,71 @@
+GERCEKCI PMT DALGA SEKILLI LM358 DEVRESI — LTspice 24.x
+========================================================
+
+NE DUZELTILDI?
+1) H10721-110 tipi akim cikisli PMT temsil edildi: I_MUON_PMT1 ve I_MUON_PMT2
+   SMA girislerinden GND'ye darbe halinde akim CEKER. R106/R206=49.9 ohm
+   uzerinde NEGATIF gerilim darbeleri olusur. Yani PMT ciktisi ile bolum
+   fiziksel olarak tutarlidir; ilave hayali gerilim kaynaklari eklenmedi.
+2) Her ortak muon olayinda iki kanalda benzer zamanda ama farkli genlikte,
+   farkli sekilde ve 0.9-2.3ns zaman kaymali darbeler var.
+3) Farkli genlikler, tek-kanal olaylari, kisa darbeler ve bant-sinirli
+   temsilî gürültu eklendi. Darbe genlikleri bilincli olarak strestest degere kadar cikar.
+4) Akim kaynagi verileri her iki kanal icin ayri PWL tablolardadir.
+5) Devrenin orijinal elektronik bilesenleri, LM358, diger komponent degerleri
+   ve butun eski WIRE / FLAG / SEMBOL topolojisi korunmus, yalnizca iki
+   kaynak ve .tran + .meas eklenmistir.
+
+UC FARKLI DEVRE:
+  MUON_LM358_01_TEK_MUON.asc       bir ortak muon + tek kanal olaylari
+  MUON_LM358_02_COKLU_MUON.asc     uc ortak muon + tek kanal olaylari
+  MUON_LM358_03_ZAYIF_GURULTULU.asc zayif ve gurultuye yakin olaylar
+
+KULLANIM
+1) ZIP'i TEK KLASORE tamamen cikarin. .asc, .asy, .lib, .cir, .inc,
+   PMT1_*.txt ve PMT2_*.txt dosyalari hep AYNI klasorde olsun.
+2) Bir .asc dosyasini LTspice'ta acin ve Run tusuna basin.
+3) Dalga penceresinde V(PMT1_SMA), V(PMT2_SMA), V(INM1), V(INM2),
+   V(U3A_OUT), V(U3B_OUT), V(CH1_PS), V(CH2_PS), V(COINC_FAST)
+   ve V(STM_COINC) dugumlerini secin.
+4) Birinci asamada PMT_KAYNAK_KONTROLU.cir dosyasinda R=49.9 ohm ile
+   negatif PMT dalga seklini diger modeller olmadan dogrulayin.
+5) .meas PMT1_MIN / PMT2_MIN sonuclarini SPICE error log'unda gorun.
+
+HANGI SAYILAR GERCEK / HANGILERI VARSAYIM?
+- GERCEK: H10721-110 akim cikislidir; datasheet PMT rise time typ 0.57 ns.
+- VARSAYIM: sintilator, optik baglama ve kablo dahil sistem icin daha yavas
+  efektif darbe bicimi (rise parametresi ~0.9-1.7 ns, decay ~6-12 ns),
+  ek yavas kuyruk ve 0.25-0.65mV RMS etkili giris gurultusu.
+- VARSAYIM: negatif 50 ohm darbe genlikleri; saha/oscilloskop olcumu
+  olmadigi icin HAMAMATSU'NUN garanti ettigi darbe genlikleri degildir.
+- KOSULLU OLAY PENCERESI: Muonlari 1.4 us icine koymamiz gozle gorulur
+  test ve simulation icindir. Gercek kozmik muon hizi veya 1.4us'te
+  beklenen olay sayisi olarak YORUMLANMAMALIDIR.
+- Iki muonun ayni olmasi otomatik olarak her iki PMT'de algilama garantisi
+  vermez. Burada karsilikli ornek darbe amplitudleri verilmis.
+
+COK ONEMLI LM358 UYARISI
+LM358 TYP ~0.7 MHz GBW ve 0.3 V/us slew rate; 8-15ns darbelere
+hizli comparator alternatifi DEGiLDIR. 3.3V beslemede yuksek
+cikis rail'e ulasmayabilir ve 3.3V Schmitt'in VIH seviyesini
+asamayabilir. Bu test sonucunda sifir coincidence gormek
+kaynak modelinin yanlis oldugu anlamina gelmez.
+
+KAYNAKLAR
+Hamamatsu H10721-110: https://www.hamamatsu.com/jp/en/product/optical-sensors/pmt/pmt-module/current-output-type/H10721-110.html
+TI LM358: https://www.ti.com/product/LM358
+LTspice PWL: https://www.analog.com/en/resources/technical-articles/ltspice-piecewise-linear-functions-for-voltage-current-sources.html
+
+DOSYALAR
+GERCEKCI_PMT_LM358_DEVRE_SEMASI.png/svg  guncel sema
+GERCEKCI_PMT_GIRIS_SEMASI.png            PMT giris bolumu
+PMT_SINYALLERI_*.png                     teorik 49.9-ohm uyaran dalga sekli
+TEK_MUON_70NS_ZOOM.png                   ns darbe seklinin yakinlastirilmasi
+OLAY_LISTESI.csv                         kaynak olayi bilgi tablosu
+MODEL_AYARLARI.json                      tum kaynak model parametreleri
+PMT_KAYNAK_KONTROLU.cir                  tek basina girdi sim kontrolu
+
+DOGRULAMA SINIRI
+Burada Windows LTspice motoru calistirilamadi. Kaynak verileri,
+ASC sembol/uc baglantilari ve dosya yerleri programatik dogrulandi;
+LM358/Schmitt sonrasi uretim gozlemlenerek teyit edilmedi.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="235" viewBox="0 0 1160 235" role="img" aria-label="Geant4 to scintillation, PMT, TLV3601, coincidence and STM32 processing">
+<rect width="1160" height="235" rx="18" fill="#0b1930"/>
+<g font-family="Arial,sans-serif" text-anchor="middle"><text x="580" y="34" font-size="18" fill="#daf7fa">FULL SIGNAL CHAIN · EXPERIMENTAL CONCEPT</text></g>
+<g stroke="#73dae4" stroke-width="1.8" fill="none"><path d="M200 118H227m-9 -7 9 7-9 7"/><path d="M411 118H438m-9 -7 9 7-9 7"/><path d="M624 118H650m-9 -7 9 7-9 7"/><path d="M834 118H859m-9 -7 9 7-9 7"/></g>
+<g font-family="Arial,sans-serif" text-anchor="middle"><rect x="25" y="78" width="175" height="80" rx="14" fill="#205375"/><text x="112" y="108" font-size="19" fill="white" font-weight="700">MUON</text><text x="112" y="132" font-size="14" fill="#c5edfa">Geant4 / geometry</text>
+<rect x="228" y="78" width="183" height="80" rx="14" fill="#20647c"/><text x="319" y="108" font-size="19" fill="white" font-weight="700">SCINTILLATOR</text><text x="319" y="132" font-size="14" fill="#c5edfa">Photon generation</text>
+<rect x="439" y="78" width="185" height="80" rx="14" fill="#197b7c"/><text x="531" y="108" font-size="19" fill="white" font-weight="700">PMT × 2</text><text x="531" y="132" font-size="14" fill="#c5edfa">H10721-110</text>
+<rect x="651" y="78" width="183" height="80" rx="14" fill="#286977"/><text x="742" y="108" font-size="19" fill="white" font-weight="700">COMPARATOR</text><text x="742" y="132" font-size="14" fill="#c5edfa">TLV3601 + shaping</text>
+<rect x="860" y="78" width="274" height="80" rx="14" fill="#1a4e77"/><text x="996" y="108" font-size="19" fill="white" font-weight="700">COINCIDENCE → STM32</text><text x="996" y="132" font-size="14" fill="#c5edfa">Logic · counters · data</text></g>
+<text x="580" y="203" text-anchor="middle" fill="#9bbed2" font-size="14" font-family="Arial,sans-serif">Connected concept only — optical transport, PMT gain and complete hardware calibration are future work.</text>
+</svg>

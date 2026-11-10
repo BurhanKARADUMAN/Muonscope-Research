@@ -1,0 +1,14 @@
+{
+  "model": "TOY_SURROGATE_NOT_GEANT4",
+  "seed": 2026,
+  "scan_size": 11,
+  "primaries_per_point": 15000,
+  "total_primaries": 1815000,
+  "counts_total_reference": 265341,
+  "counts_total_sample": 262324,
+  "pmt_demo": {
+    "pm1_crossings": 8,
+    "pm2_crossings": 11,
+    "matched_events": 3
+  }
+}

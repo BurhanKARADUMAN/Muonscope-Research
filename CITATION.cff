@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you reuse MuonScope in your research, please cite this repository."
+title: "MuonScope: Cosmic Muon Radiography and Detector Readout Research"
+type: software
+authors:
+  - family-names: Karaduman
+    given-names: Burhan
+version: 0.1.0
+date-released: 2026-11-10
+license: MIT
+keywords:
+  - muon radiography
+  - scintillator
+  - Geant4
+  - PMT
+  - coincidence electronics

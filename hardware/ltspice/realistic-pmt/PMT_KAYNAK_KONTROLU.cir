@@ -1,0 +1,10 @@
+* PMT CURRENT SOURCE ONLY: verify negative current-output pulses into 49.9 Ohms
+I_PMT1 PMT1_SMA 0 PWL FILE=PMT1_01_TEK_MUON.txt
+I_PMT2 PMT2_SMA 0 PWL FILE=PMT2_01_TEK_MUON.txt
+R_PM1 PMT1_SMA 0 49.9
+R_PM2 PMT2_SMA 0 49.9
+.tran 0 1.4u 0 0.15n
+.meas tran PMT1_MIN MIN V(PMT1_SMA) FROM 0.1u TO 1.3u
+.meas tran PMT2_MIN MIN V(PMT2_SMA) FROM 0.1u TO 1.3u
+.save V(PMT1_SMA) V(PMT2_SMA)
+.end

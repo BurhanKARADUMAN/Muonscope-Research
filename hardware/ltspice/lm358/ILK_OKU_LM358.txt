@@ -1,0 +1,51 @@
+MUON SAYIM DEVRESI - LM358 SURUMU
+================================
+
+ACILIS
+1. ZIP'i tamamen ayni klasore cikar.
+2. MUON_LM358.asc dosyasini Windows LTspice ile ac.
+3. AJ_LM358.asy, diger .asy sembolleri, LM358.lib, SUNUM_MODELLER.inc
+   ve iki SN74LVC*.cir dosyasi ASC ile AYNI KLASORDE bulunmali.
+4. MUON_LM358_TAM_SEMA.svg/png butun semayi; MUON_LM358_ANA_SINYAL_YOLU.png
+   ust bolumdeki iki PMT kanalini ve coincidence akis yolunu gosterir.
+
+NE DEGISTI?
+- XU3A ve XU3B (iki TLV3601 alt devresi) yerine iki LM358 opamp kanali eklendi.
+- .SUBCKT LM358 modeli, yukledigin 'lm358.txt' dosyasindan aktarildi.
+- Yazilar ve model include satiri LM358 olarak guncellendi.
+- Sembol sekli/konumu, pinlerin koordinatlari, WIRE / FLAG satirlari,
+  pasif elemanlar, 3.3V beslemeler ve diger logic bloklari degistirilmedi.
+- XU3A/XU3B Spice modelinde ayri kanallardir; fiziksel olarak
+  TEK LM358 entegresinin A ve B kanallarina karsilik gelebilir.
+
+KRITIK: LM358 MODELININ PIN SIRASI
+
+Yuklenen modelin tanimi:
+.SUBCKT LM358 IN- IN+ OUT V+ V-
+(Bu satir orijinal netlistte 1 2 3 4 5 diye yazilidir.)
+
+Sembol pini     LM358 subckt SpiceOrder    Elektriksel baglanti
+IN+             2                           Esik: TH1_OFF / TH2_OFF
+IN-             1                           PMT: INM1 / INM2
+OUT             3                           U3A_OUT / U3B_OUT
+V+              4                           V3A
+V-              5                           0 / GND
+
+GERCEK LM358 DIP/SOIC 8-BACAK BAGLANTILARI:
+A bolumu: OUT=1, IN-=2, IN+=3
+B bolumu: OUT=7, IN-=6, IN+=5
+Ortak besleme: V+=8, V-=4
+Asagidaki alt devre pin sirasi, fiziksel entegre pin numarasi DEGILDIR.
+
+PERFORMANS / DOGRU SIMULASYON UYARILARI:
+- LM358 hizli bir comparator DEGILDIR; ~0.3 V/us slew rate, ~0.7 MHz GBW.
+  8-15 ns PMT darbelerinde guvenilir yakalama beklenmemelidir.
+- Besleme V3A=3.3V ayni birakildi. LM358 cikisi rail-to-rail degildir;
+  yuksek seviyede 3.3V'a ulasamayabilir. Sonraki Schmitt girisindeki
+  yuksek durum esigini gecememe riski vardir.
+- LM358'in ortak-mod ve diferansiyel giris araliklari test edilmelidir.
+- Orijinal ASC sunum amaclidir: PMT darbe kaynaklari ve .tran komutu yoktur.
+  Dolayisiyla bu paket kendi basina zamana bagli PMT darbe testi yapmaz.
+- Burada Windows LTspice calistirilamadi. Model/pin ve geometri kontrolleri
+  programatik yapilmistir; transiyent simulasyon sonucu iddia edilmez.
+- Bu dosya dogrudan fiziksel devre montaj plani/BOM degildir.

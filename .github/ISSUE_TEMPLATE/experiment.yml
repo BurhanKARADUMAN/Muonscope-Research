@@ -1,0 +1,31 @@
+name: Reproducibility / experiment request
+description: Propose a falsifiable measurement, simulation or calibration test
+title: '[experiment] '
+labels: ['experiment']
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What physical statement are we testing?
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Geometry, controls, parameters and seeds
+    validations:
+      required: true
+  - type: textarea
+    id: measurable
+    attributes:
+      label: Measurement, uncertainty model and acceptance criteria
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidence category
+      options: ['Measured hardware', 'Geant4 transport', 'LTspice transient', 'Toy surrogate', 'Historical record']
+    validations:
+      required: true

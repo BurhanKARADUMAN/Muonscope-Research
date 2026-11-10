@@ -1,0 +1,201 @@
+{
+  "warning": "Illustrative event-level model, not calibrated to experimental PMT traces and not physical counting-rate simulation.",
+  "manufacturer": "Hamamatsu H10721-110 current-output, typical rise time 0.57ns (module spec)",
+  "resistor_ohm": 49.9,
+  "time_step_ns": 0.25,
+  "snapshot_ns": 1400.0,
+  "shape": "normalized weighted sum of (exp(-t/tau_f)-exp(-t/tau_r)) and slow tail; injected as sinking current into 49.9 Ohm",
+  "noise": "correlated Gaussian effective input noise assumed; noise values are not manufacturer-guaranteed",
+  "cases": {
+    "01_TEK_MUON": {
+      "desc": "Tek koinsidans muonu, ardindan iki kanalda bagimsiz kucuk dark/single olayi.",
+      "noise_mV_rms": 0.25,
+      "channel_1": [
+        {
+          "type": "muon",
+          "t_ns": 280.0,
+          "peak_mV": 220,
+          "rise_ns": 0.9,
+          "decay_ns": 8.5,
+          "tail_fraction": 0.12
+        },
+        {
+          "type": "single_dark",
+          "t_ns": 760.0,
+          "peak_mV": 9,
+          "rise_ns": 0.8,
+          "decay_ns": 6.0,
+          "tail_fraction": 0.02
+        }
+      ],
+      "channel_2": [
+        {
+          "type": "muon",
+          "t_ns": 281.6,
+          "peak_mV": 145,
+          "rise_ns": 1.1,
+          "decay_ns": 9.8,
+          "tail_fraction": 0.17
+        },
+        {
+          "type": "single_dark",
+          "t_ns": 1030.0,
+          "peak_mV": 11,
+          "rise_ns": 0.7,
+          "decay_ns": 6.8,
+          "tail_fraction": 0.03
+        }
+      ]
+    },
+    "02_COKLU_MUON": {
+      "desc": "Uc ortak muon adayi, farkli genlik ve zaman kaymalari, iki tek-kanal olayi.",
+      "noise_mV_rms": 0.35,
+      "channel_1": [
+        {
+          "type": "muon",
+          "t_ns": 170,
+          "peak_mV": 105,
+          "rise_ns": 1.1,
+          "decay_ns": 8.0,
+          "tail_fraction": 0.12
+        },
+        {
+          "type": "single_background",
+          "t_ns": 415,
+          "peak_mV": 32,
+          "rise_ns": 1.5,
+          "decay_ns": 7.1,
+          "tail_fraction": 0.08
+        },
+        {
+          "type": "muon",
+          "t_ns": 660,
+          "peak_mV": 310,
+          "rise_ns": 0.9,
+          "decay_ns": 11,
+          "tail_fraction": 0.18
+        },
+        {
+          "type": "muon",
+          "t_ns": 1120,
+          "peak_mV": 53,
+          "rise_ns": 1.6,
+          "decay_ns": 8,
+          "tail_fraction": 0.1
+        }
+      ],
+      "channel_2": [
+        {
+          "type": "muon",
+          "t_ns": 171.7,
+          "peak_mV": 170,
+          "rise_ns": 1.0,
+          "decay_ns": 8.2,
+          "tail_fraction": 0.16
+        },
+        {
+          "type": "muon",
+          "t_ns": 662.2,
+          "peak_mV": 115,
+          "rise_ns": 1.4,
+          "decay_ns": 9.6,
+          "tail_fraction": 0.12
+        },
+        {
+          "type": "single_background",
+          "t_ns": 904,
+          "peak_mV": 19,
+          "rise_ns": 1.2,
+          "decay_ns": 8.4,
+          "tail_fraction": 0.12
+        },
+        {
+          "type": "muon",
+          "t_ns": 1120.9,
+          "peak_mV": 94,
+          "rise_ns": 1.2,
+          "decay_ns": 9.0,
+          "tail_fraction": 0.1
+        }
+      ]
+    },
+    "03_ZAYIF_GURULTULU": {
+      "desc": "Zayif muon kanallari, gürültüye yakin darbeler, secim verimi / esik stres testi.",
+      "noise_mV_rms": 0.65,
+      "channel_1": [
+        {
+          "type": "muon",
+          "t_ns": 260,
+          "peak_mV": 7,
+          "rise_ns": 1.7,
+          "decay_ns": 8.0,
+          "tail_fraction": 0.12
+        },
+        {
+          "type": "muon",
+          "t_ns": 710,
+          "peak_mV": 70,
+          "rise_ns": 1.1,
+          "decay_ns": 10,
+          "tail_fraction": 0.18
+        },
+        {
+          "type": "muon",
+          "t_ns": 1100,
+          "peak_mV": 39,
+          "rise_ns": 1.2,
+          "decay_ns": 10,
+          "tail_fraction": 0.16
+        },
+        {
+          "type": "single_dark",
+          "t_ns": 480,
+          "peak_mV": 4,
+          "rise_ns": 0.8,
+          "decay_ns": 5.0,
+          "tail_fraction": 0.0
+        }
+      ],
+      "channel_2": [
+        {
+          "type": "muon",
+          "t_ns": 262.3,
+          "peak_mV": 26,
+          "rise_ns": 1.0,
+          "decay_ns": 8,
+          "tail_fraction": 0.1
+        },
+        {
+          "type": "muon",
+          "t_ns": 711.8,
+          "peak_mV": 9,
+          "rise_ns": 1.6,
+          "decay_ns": 12,
+          "tail_fraction": 0.16
+        },
+        {
+          "type": "muon",
+          "t_ns": 1101.3,
+          "peak_mV": 38,
+          "rise_ns": 1.4,
+          "decay_ns": 10,
+          "tail_fraction": 0.16
+        },
+        {
+          "type": "single_dark",
+          "t_ns": 900,
+          "peak_mV": 3.5,
+          "rise_ns": 0.9,
+          "decay_ns": 6.0,
+          "tail_fraction": 0.0
+        }
+      ]
+    }
+  },
+  "extreme_note": "LM358 ~0.3 V/us and ~0.7MHz cannot faithfully discriminate 1-15ns PMT pulses; LM358 supplies unchanged at 3.3V can fail Schmitt threshold",
+  "references": [
+    "https://www.hamamatsu.com/jp/en/product/optical-sensors/pmt/pmt-module/current-output-type/H10721-110.html",
+    "https://www.ti.com/product/LM358",
+    "https://www.analog.com/en/resources/technical-articles/ltspice-piecewise-linear-functions-for-voltage-current-sources.html"
+  ]
+}

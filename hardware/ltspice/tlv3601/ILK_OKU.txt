@@ -1,0 +1,30 @@
+MUON SAYIM DEVRESI - SUNUM SEMASI
+
+ZIP'i bir klasore cikar ve MUON_SUNUM.asc dosyasini LTspice'ta ac.
+ASY, LIB, CIR ve INC dosyalarini ASC ile ayni klasorde tut.
+Pakette tek bir ana devre semasi bulunur; CIR dosyalari TI modelleridir.
+
+Sunuma eklemek icin:
+- MUON_ANA_SINYAL_YOLU.png: iki PMT kanali, Schmitt, AND ve STM cikislari.
+- MUON_TAM_SEMA.svg: tum semanin yakinlastirilabilir vektor cizimi.
+- MUON_TAM_SEMA.png: tum semanin yuksek cozunurluklu goruntusu.
+
+Devre, son asimetrik test paketinin 00 numarali semasindan turetildi.
+Ana devrenin baglantilari ve nominal degerleri korundu. Testlere ait
+darbe/gurultu/offset kaynaklari ve PMT kaynak-direnci modeli kaldirildi.
+Direnc/kapasite parametreleri 00 testindeki sabit degerlerine cevrildi.
+Tarama ve analiz komutu yoktur; bu dosya semayi gostermek icindir.
+
+CH1_PS ve CH2_PS, ilk Schmitt cikislaridir ve AND'e gider.
+PMT girisleri PMT1_SMA / PMT2_SMA portlaridir. MCU arayuzleri:
+STM_SING1, STM_SING2 ve STM_COINC. Paket/GPIO pin numarasi atanmadi.
+
+CABLE, CIN, PAR, STM yuk kapasiteleri ve yuk direncleri model
+esdegerleridir; otomatik olarak ek satin alinacak parcalar sayilmaz.
+REG bloklari onceki 5V / 3.3V besleme esdegerleridir; belirli bir
+regulatorun uretici modelini temsil etmez. Diyot yaklasimlari korundu.
+TLV3601, SN74LVC2G17 ve SN74LVC1G08 TI dosyalari degistirilmedi.
+
+Sembol pinlerinin 16 birim izgaraya oturmasi ve ASC'deki elektriksel
+baglantilar kaynak devreyle denetlendi. Windows LTspice bu ortamda
+calistirilmadi; yeni bir performans testi veya test sonucu uretilmedi.

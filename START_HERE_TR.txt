@@ -1,0 +1,22 @@
+MUONSCOPE - GITHUB'A YUKLEME (Windows)
+
+Hedef: https://github.com/BurhanKARADUMAN/muonscope-research
+Bu depo mevcut ve 10 Kasim 2026 kontrolunde bos gorunuyordu.
+
+1. ZIP dosyasini Dosya Gezgini ile acip 'Tumu ayikla' sec.
+2. Cikan muonscope-research klasorune gir.
+3. Adres cubuguna powershell yazip Enter tusuna bas.
+4. Git ve gh yüklü degilse:
+   winget install --id Git.Git -e
+   winget install --id GitHub.cli -e
+   (Ardindan PowerShell penceresini yeniden ac.)
+5. Hesabina giris:
+   gh auth login
+   (GitHub.com, HTTPS, browser sec.)
+6. Asagidaki komutu calistir:
+   powershell -ExecutionPolicy Bypass -File .\UPLOAD_TO_EXISTING_GITHUB.ps1
+7. Kontrol et:
+   https://github.com/BurhanKARADUMAN/muonscope-research
+
+Bu betik, uzak depoda herhangi bir commit/branch varsa DURUR. Eski depolari degistirmez.
+Hata cikarsa PowerShell'deki hata metnini paylas.

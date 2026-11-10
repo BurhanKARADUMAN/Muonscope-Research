@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="MuonScope cosmic muon imaging and fast detector instrumentation">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09152a"/><stop offset="1" stop-color="#12334d"/></linearGradient>
+<linearGradient id="glow" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#57d7eb"/><stop offset="1" stop-color="#a7f3d0"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+<pattern id="grid" width="33" height="33" patternUnits="userSpaceOnUse"><path d="M33 0H0V33" stroke="#ffffff" stroke-opacity="0.05" fill="none"/></pattern>
+</defs>
+<rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+<rect width="1200" height="340" rx="18" fill="url(#grid)"/>
+<circle cx="1000" cy="150" r="150" fill="#2ccaca" opacity=".07" filter="url(#blur)"/>
+<g font-family="Inter,Arial,sans-serif" fill="#fff">
+<text x="64" y="130" font-size="72" font-weight="800" letter-spacing="-3">MUON<tspan fill="#5de0e6">SCOPE</tspan></text>
+<text x="67" y="170" font-size="20" fill="#a4c8dc" letter-spacing="2">COSMIC RAYS · DETECTORS · SIGNALS · DATA</text>
+<text x="67" y="245" font-size="18" fill="#e5f6ff">From particle transport to nanosecond coincidence readout</text>
+<text x="67" y="284" font-size="15" fill="#60d5db">GEANT4  /  LTSPICE  /  PYTHON  /  STM32</text>
+</g>
+<g transform="translate(800,20)" stroke-linecap="round" stroke-linejoin="round">
+<g fill="none" stroke="#9aeef1" stroke-width="2.5" opacity=".8">
+<path d="M50 62L260 62L315 92L105 92Z"/><path d="M50 250L260 250L315 280L105 280Z"/>
+</g>
+<g fill="#4bd4dc" opacity=".22"><path d="M50 62L260 62L315 92L105 92Z"/><path d="M50 250L260 250L315 280L105 280Z"/></g>
+<g fill="#e19a65" opacity=".5" stroke="#ffc49f" stroke-width="2"><path d="M137 140L219 129L263 153L180 165Z"/><path d="M137 140L180 165V206L137 180Z"/><path d="M180 165L263 153V193L180 206Z"/></g>
+<g stroke="#75ecf4" stroke-width="3.5" fill="none"><path d="M79 7L166 158L237 316"/><path d="M226 2L222 154L215 317"/></g>
+<g fill="#a5f9ff"><circle cx="105" cy="81" r="6"/><circle cx="137" cy="264" r="6"/><circle cx="223" cy="81" r="6"/><circle cx="218" cy="264" r="6"/></g>
+<g stroke="#90eaf0" stroke-width="1.5" stroke-dasharray="4 9" opacity=".65"><path d="M44 84L335 84"/><path d="M44 269L335 269"/></g>
+</g>
+</svg>

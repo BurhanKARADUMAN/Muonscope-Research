@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(MuonScopeGeant4 LANGUAGES CXX)
+find_package(Geant4 REQUIRED)
+include(${Geant4_USE_FILE})
+add_executable(muonscope_g4 main.cc)
+target_compile_features(muonscope_g4 PRIVATE cxx_std_17)
+target_link_libraries(muonscope_g4 PRIVATE ${Geant4_LIBRARIES})

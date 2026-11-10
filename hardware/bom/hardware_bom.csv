@@ -1,0 +1,13 @@
+Ref,Description,Design_quantity,Proposed_order_quantity,Design_status,Notes
+U3A+U3B,TLV3601 high-speed comparator,2,4,Selected-concept,Verify exact package and pinout
+U5 family,SN74LVC2G17 dual Schmitt trigger,3,5,Selected-concept,Quantity from presentation schematic summary
+U4,SN74LVC1G08 AND gate,1,3,Selected-concept,Verify logic supply
+D pulse,BAT54 Schottky diode,3,6,Provisional,Verify selected variant and response
+D protection,BAS70 Schottky diode,4,8,Provisional,Verify clipping/protection behavior
+J1-J2,SMA 50-ohm PCB connectors,2,4,Required,Match PCB/mechanical footprint
+R term,49.9-ohm precision input termination,2,4,Required,Check pulse load & power
+Passive,R/C networks and decoupling,1 set,1 set,Not-finalized,Extract final schematic BOM before order
+Supply,3.3V and 5V low-noise power rails,1,1,Not-finalized,Regulator symbol is placeholder
+DAQ,STM32 NUCLEO-F746ZG or equivalent,1,1,Proposed,Counter must support pulse timing and logic levels
+PMT,Hamamatsu H10721-110 current-output module,2,2,Existing-target,Confirm in-lab availability and operating conditions
+Optics,Scintillator and optical wrapping/coupling,2,2,Not-finalized,Dimensions and scintillator type need confirmation
