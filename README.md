@@ -1,3 +1,12 @@
+<!-- MUONSCOPE-TEAM-BEGIN -->
+### Project team
+
+**[ErgÃ¼n Ã–zakyÄ±ldÄ±z](https://tr.linkedin.com/in/erg%C3%BCn-%C3%B6zaky%C4%B1ld%C4%B1z-822a24188/)** Â· **[NazlÄ±can YÄ±ldÄ±rÄ±m](https://www.linkedin.com/in/nazlicanyildirim255/)** Â· **[Emre YaÄŸÄ±z Ã–ztÃ¼k](https://www.linkedin.com/in/emre-ya%C4%9F%C4%B1z-%C3%B6zt%C3%BCrk-22037a295/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BvSzvEMe4QaaLaLbIvS64Vw%3D%3D)**
+
+<sub>Emre's direct profile URL has not yet been verified. Replace the search link when available.</sub>
+<!-- MUONSCOPE-TEAM-END -->
+
+---
 <div align="center">
 
 <img src="docs/figures/muonscope-banner.svg" width="100%" alt="MuonScope: cosmic muon radiography and detector electronics" />
